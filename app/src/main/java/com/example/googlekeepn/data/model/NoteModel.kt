@@ -1,4 +1,4 @@
-package com.example.googlekeepn.model.data
+package com.example.googlekeepn.data.model
 
 data class NoteModel(
     val noteTitle: String,
