@@ -1,10 +1,13 @@
 package com.example.googlekeepn.data.model
 
-data class NoteModel(
-    val noteTitle: String,
-    val noteBody: NoteBody
-)
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.util.Date
 
-data class NoteBody(
-    val text: String
+@Entity(tableName = "notes")
+data class NoteModel(
+    @PrimaryKey val uuid: String,
+    @ColumnInfo(name = "note_title") val noteTitle: String,
+    @ColumnInfo(name = "note_Body") val noteBody: String?
 )
